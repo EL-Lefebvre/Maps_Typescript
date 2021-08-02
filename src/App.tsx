@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { User } from "./components/User";
+import { Company } from "./components/Company";
+import { CustomMap } from "./components/CustomMap";
+import "./App.css";
+import userEvent from "@testing-library/user-event";
 
+const customMap = new CustomMap("map");
+const user = new User();
+
+customMap.addUserMarker(user);
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const user = new User();
+  console.log(user);
+
+  const company = new Company();
+  console.log(company);
+
+  return <div className="App"></div>;
 }
 
 export default App;
