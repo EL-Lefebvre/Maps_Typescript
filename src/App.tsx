@@ -1,22 +1,17 @@
-import React from "react";
 import { User } from "./components/User";
 import { Company } from "./components/Company";
 import { CustomMap } from "./components/CustomMap";
 import "./App.css";
-import userEvent from "@testing-library/user-event";
 
 const customMap = new CustomMap("map");
 const user = new User();
+const company = new Company();
 
-customMap.addUserMarker(user);
+customMap.addMarker(user);
+customMap.addMarker(company);
+
 function App() {
-  const user = new User();
-  console.log(user);
-
-  const company = new Company();
-  console.log(company);
-
-  return <div className="App"></div>;
+  return <div className="App"> </div>;
 }
 
 export default App;
